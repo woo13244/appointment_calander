@@ -1,0 +1,59 @@
+.calander_container{
+    .calander_header{
+        display: flex;
+        max-width: 100%;
+        background: #ccc;
+        padding: 15px;
+        justify-content: space-between;
+        align-items: center;
+
+        .cal_arrow{
+            cursor: pointer;
+        }
+    }
+    .calander_body{
+        display: flex;
+        flex-wrap: wrap;
+        .day_container{
+            min-width: calc(100% / 7);
+            height: calc((100vh - 118px) / 6);
+        }
+        .day_container:nth-child(odd){
+            background: #f4f4f4;
+        }
+        .disabled{
+            color: gray;
+        }
+    }
+    .new_modal_container{
+        height: 100%;
+        position: absolute;
+        width: 100%;
+        max-height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .background{
+            height: 100%;
+            position: absolute;
+            width: 100%;
+            max-height: 100%;
+            background: black;
+            opacity: .5;
+            z-index: 1;
+        }
+        .modal_container{
+            z-index: 2;
+
+            .modal_header{
+                padding: 20px;
+                background: #ccc;
+            }
+            .modal_body{
+                background: white;
+                padding:20px;
+            }
+        }
+    }
+}
